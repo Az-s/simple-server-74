@@ -1,5 +1,5 @@
 const express = require('express');
-const messages = require('./messages/messages');
+const messages = require('./messages');
 
 const app = express();
 app.use(express.json());
