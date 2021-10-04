@@ -1,12 +1,12 @@
 const express = require('express');
+const messages = require('./messages/messages');
 
 const app = express();
+app.use(express.json());
 const port = 8000;
 
-app.get('/', (req, res)=> {
-    res.send('Hello!');
-});
+app.use('/messages', messages);
 
 app.listen(port, () => {
-    console.log('Were are live on http:localhost:' + port)
+    console.log('Server started on http:localhost:' + port)
 });
