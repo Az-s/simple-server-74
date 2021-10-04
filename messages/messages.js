@@ -27,18 +27,18 @@ getMessage = () => {
 
             if (ndx > files.length - 6) {
                 fs.readFile(path + file, (err, data) => {
-
+                    
                     if (err) {
                         console.log(err);
                     } else {
                         console.log(JSON.parse(data));
-                        arr.push(JSON.parse(data))
+                        arr.push(JSON.parse(data));
                     }
 
                 });
             }
         });
-
+        
     });
 };
 
